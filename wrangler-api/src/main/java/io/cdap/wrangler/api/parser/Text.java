@@ -48,4 +48,8 @@ public class Text implements Token {
     object.addProperty("value", value);
     return object;
   }
+
+  public void setType(TokenType directiveName) {
+    throw new UnsupportedOperationException("Unimplemented method 'setType'");
+  }
 }

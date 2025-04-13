@@ -84,4 +84,10 @@ public interface Lineage {
    * @return a instance of {@link Mutation} object used to generate lineage.
    */
   Mutation lineage();
+
+  void addWrite(String totalSizeColumn, String totalTimeColumn);
+
+  void addRead(String byteSizeColumn, String timeDurationColumn);
+
+  void addMutation(Mutation mutation);
 }

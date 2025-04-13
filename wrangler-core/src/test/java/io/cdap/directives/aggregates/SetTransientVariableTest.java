@@ -115,6 +115,12 @@ public class SetTransientVariableTest {
       public <T> Lookup<T> provide(String s, Map<String, String> map) {
         return null;
       }
+
+      @Override
+      public boolean isLast() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isLast'");
+      }
     });
     Assert.assertEquals(2, rows.size());
     Assert.assertEquals(2, s.get("test"));

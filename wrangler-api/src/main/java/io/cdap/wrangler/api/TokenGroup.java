@@ -58,4 +58,8 @@ public final class TokenGroup {
   public SourceInfo getSourceInfo() {
     return info;
   }
+
+  public List<Token> getTokens() {
+    return tokens;  
+  }
 }

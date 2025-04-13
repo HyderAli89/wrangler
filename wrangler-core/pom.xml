@@ -14,7 +14,9 @@
   ~ License for the specific language governing permissions and limitations under
   ~ the License.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <artifactId>wrangler</artifactId>
     <groupId>io.cdap.wrangler</groupId>
@@ -33,9 +35,7 @@
   </repositories>
 
   <dependencies>
-
     <!-- Internal -->
-
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
@@ -69,8 +69,14 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- Test -->
+    <!-- ANTLR Runtime -->
+    <dependency>
+      <groupId>org.antlr</groupId>
+      <artifactId>antlr4-runtime</artifactId>
+      <version>${antlr4.version}</version>
+    </dependency>
 
+    <!-- Test -->
     <dependency>
       <groupId>io.cdap.cdap</groupId>
       <artifactId>cdap-unit-test</artifactId>
@@ -107,7 +113,6 @@
     </dependency>
 
     <!-- External -->
-
     <dependency>
       <groupId>com.github.everit-org.json-schema</groupId>
       <artifactId>org.everit.json.schema</artifactId>
@@ -203,7 +208,6 @@
     </dependency>
 
     <!-- Apache -->
-
     <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi</artifactId>
@@ -257,13 +261,11 @@
     </dependency>
 
     <!-- UHN -->
-
     <dependency>
       <groupId>ca.uhn.hapi</groupId>
       <artifactId>hapi-base</artifactId>
       <version>${hl7.version}</version>
     </dependency>
-    <!-- These are structure JARs for HL7 v2.1 and 2.5.1 (as an example) -->
     <dependency>
       <groupId>ca.uhn.hapi</groupId>
       <artifactId>hapi-structures-v21</artifactId>
@@ -310,7 +312,6 @@
       <version>${cdap.version}</version>
     </dependency>
   </dependencies>
-
 
   <build>
     <resources>
@@ -360,5 +361,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>

@@ -311,3 +311,21 @@ fragment Int
 fragment Digit
  : [0-9]
  ;
+
+
+
+// Byte Size token
+BYTE_SIZE : NUMBER (SPACE)? BYTE_UNIT ;
+fragment BYTE_UNIT : [kKmMgGtTpP][bB] | 'bytes' | 'Bytes' | 'BYTES' | 'B' ;
+
+
+TIME_DURATION : NUMBER (SPACE)? TIME_UNIT ;
+fragment TIME_UNIT : 'ms' | 's' | 'min' | 'h' | 'd' | 'ns' | 'seconds' | 'minutes' | 'hours' | 'days' ;
+
+
+
+byteSizeArg : BYTE_SIZE ;
+timeDurationArg : TIME_DURATION ;
+
+
+value : (STRING | NUMBER | BOOLEAN | BYTE_SIZE | TIME_DURATION | ...) ;

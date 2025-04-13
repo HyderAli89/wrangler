@@ -81,4 +81,6 @@ public interface ExecutorContext extends LookupProvider, Serializable {
   default boolean isSchemaManagementEnabled() {
     return false;
   }
+
+  boolean isLast();
 }
